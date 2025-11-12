@@ -9,8 +9,11 @@ const checkAnswer = () => {
 
     //Compare the user's answer with the correct answer
 
-    document.querySelector("#feedback").textContent =
-  userAnswer === correctAnswer ? "Correct! Well done." : "Incorrect. Please try again.";
+    if (userAnswer === correctAnswer) {
+      document.querySelector("#feedback").textContent = "Correct! Well done.";
+    } else {
+      document.querySelector("#feedback").textContent = "That's incorrect. Try again!";
+    }
     
   //Add event listener to the submit button
 
